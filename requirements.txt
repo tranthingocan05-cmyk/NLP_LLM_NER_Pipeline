@@ -1,0 +1,7 @@
+# Trong requirements.txt
+torch
+transformers
+accelerate
+spacy
+datasets
+scikit-learn  # Dùng cho Evaluation
