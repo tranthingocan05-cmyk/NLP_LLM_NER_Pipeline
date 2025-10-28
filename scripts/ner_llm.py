@@ -3,7 +3,6 @@ import torch
 import json
 # No need to import accelerate; installation is enough.
 
-# The model name you chose
 MODEL_NAME = "google/flan-t5-small"
 tokenizer = None
 model = None # Initialize variable to prevent UnboundLocalError
@@ -27,8 +26,6 @@ except Exception as e:
     # Ensure you have installed 'accelerate' if using device_map!
     
 # Continue with generate_prompt and extract_flan_t5_entities functions
-# ...
-# -----------------------------------------------------------------
 
 # Function 1: Prompt Engineering Logic
 def generate_prompt(text, global_entities, max_context_entities=30):
@@ -153,4 +150,5 @@ def extract_flan_t5_entities(text, global_entities):
         return []
     except Exception as e:
         print(f"General LLM Extraction Error: {e}")
+
         return []
